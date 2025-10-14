@@ -16,7 +16,7 @@ These credentials have strengthened my knowledge in **cloud architecture, deploy
 
 ## Open-Source Project: FlowSynx
 
-**[FlowSynx](https://github.com/flowsynx/FlowSynx)** is my open-source initiative focused on **workflow automation and orchestration** through a **JSON-based DAG (Directed Acyclic Graph) execution model**.  
+**[FlowSynx](https://github.com/flowsynx/flowsynx)** is my open-source initiative focused on **workflow automation and orchestration** through a **JSON-based DAG (Directed Acyclic Graph) execution model**.  
 
 FlowSynx simplifies **complex workflow processing** with a **modular, plugin-based architecture** and **visual workflow representation**. Key features include:  
 
