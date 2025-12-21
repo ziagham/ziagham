@@ -1,6 +1,6 @@
 # 👋 Welcome
 
-My name is **Amin Ziagham**, a **Software Engineer** with over **10 years of professional experience** in software design and development. I began programming at **age 17**, which sparked my lifelong passion for building software and solving complex problems. I am currently **learning AI engineering**, expanding my expertise into artificial intelligence, machine learning, and intelligent system design.  
+My name is **Amin Ziagham**, a **Software Engineer** with over **15 years of professional experience** in software design and development. I began programming at **age 17**, which sparked my lifelong passion for building software and solving complex problems. I am currently **learning AI engineering**, expanding my expertise into artificial intelligence, machine learning, and intelligent system design.  
 
 I specialize in **building scalable, maintainable, and high-quality software systems** using principles of **clean architecture** and **elegant coding practices**. My expertise spans **Mathematical Optimization, System Architectures, Algorithmic Problem Solving**, and now **AI/ML-driven solutions**. I am **detail-oriented, self-driven**, and passionate about exploring and adapting to new technologies and engineering concepts.  
 
