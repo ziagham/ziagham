@@ -14,18 +14,9 @@ I hold multiple **Microsoft Azure certifications**, validating my proficiency in
 
 These credentials have strengthened my knowledge in **cloud architecture, deployment strategies, and DevOps integration**.  
 
-## Open-Source Project: FlowSynx
+## Open-Source Project: GenoFlow
 
-**[FlowSynx](https://github.com/flowsynx/flowsynx)** is my open-source initiative focused on **workflow automation and orchestration** through a **JSON-based DAG (Directed Acyclic Graph) execution model**.  
-
-FlowSynx simplifies **complex workflow processing** with a **modular, plugin-based architecture** and **visual workflow representation**. Key features include:  
-
-- **.NET-based workflow engine**  
-- **Clean Architecture implementation**  
-- **Blazor-based GUI**  
-- **Built-in authentication and security**  
-
-The project embodies my vision of creating **intelligent, extensible, and human-readable workflow systems** for **modern distributed applications**, now increasingly integrating **AI and intelligent automation concepts**.  
+**[GenoFlow](https://github.com/genoflow/genoflow)** is my open-source initiative focused on **Bio-Inspired Workflow Automation & Evolutionary Computation**.  
 
 ## Philosophy
 
