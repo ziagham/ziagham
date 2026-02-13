@@ -1,31 +1,69 @@
 # 👋 Welcome
 
-My name is **Amin Ziagham**, a **Software Engineer** with over **15 years of professional experience** in software design and development. I began programming at **age 17**, which sparked my lifelong passion for building software and solving complex problems. I am currently **learning AI engineering**, expanding my expertise into artificial intelligence, machine learning, and intelligent system design.  
+I’m **Amin Ziagham** — a **Software Engineer** with over **15 years of professional experience** designing and building robust software systems.
 
-I specialize in **building scalable, maintainable, and high-quality software systems** using principles of **clean architecture** and **elegant coding practices**. My expertise spans **Mathematical Optimization, System Architectures, Algorithmic Problem Solving**, and now **AI/ML-driven solutions**. I am **detail-oriented, self-driven**, and passionate about exploring and adapting to new technologies and engineering concepts.  
+🚀 I started programming at **17**, and since then, engineering has been more than a career — it’s been a lifelong passion.
 
-## Microsoft Certifications
+🎯 I’m a proud member of the **.NET Foundation**, actively supporting and contributing to the open-source ecosystem.
 
-I hold multiple **Microsoft Azure certifications**, validating my proficiency in cloud solutions and development within the **.NET ecosystem**:  
+🤖 Currently, I’m expanding my expertise into **AI Engineering**, focusing on artificial intelligence, machine learning, and intelligent system design.
 
-- [**Microsoft Certified: Azure Fundamentals (AZ-900)**](https://learn.microsoft.com/api/credentials/share/en-us/AminZiagham/D685BF5239F0084A?sharingId=FBCFF8F3F0CB5277)  
-- [**Microsoft Certified: Azure Administrator Associate (AZ-104)**](https://learn.microsoft.com/api/credentials/share/en-us/AminZiagham/C404DAA9350C528C?sharingId=FBCFF8F3F0CB5277)  
-- [**Microsoft Certified: Azure Developer Associate (AZ-204)**](https://learn.microsoft.com/api/credentials/share/en-us/AminZiagham/653AB46A1AC801A9?sharingId=FBCFF8F3F0CB5277)  
+## 🧠 What I Do Best
 
-These credentials have strengthened my knowledge in **cloud architecture, deployment strategies, and DevOps integration**.  
+I specialize in building:
 
-## Open-Source Project: GenoFlow
+* 🏗 **Scalable & Maintainable Architectures**
+* 🧩 **Clean, Elegant, and Testable Codebases**
+* 📊 **Mathematical Optimization Models**
+* ⚙️ **Algorithmically Efficient Systems**
+* 🤖 **AI & ML–Driven Solutions**
 
-**[GenoFlow](https://github.com/genoflow/genoflow)** is my open-source initiative focused on **Bio-Inspired Workflow Automation & Evolutionary Computation**.  
+My engineering philosophy combines **clean architecture principles**, **mathematical rigor**, and **modern cloud-native practices** to deliver systems that are not only functional — but **refined and future-ready**.
 
-## Philosophy
+I’m detail-oriented, self-driven, and deeply committed to mastering emerging technologies.
 
-I embrace an **open-source–driven approach** emphasizing **collaboration, transparency, and adaptability**. My approach integrates **mathematical programming, algorithmic problem-solving, and AI-driven insights** to develop **robust, scalable, and elegant software solutions**. I prioritize **continuous learning, experimentation, and knowledge sharing**, striving to contribute meaningfully to both the projects I work on and the broader engineering community.  
+## ☁️ Microsoft Certifications
 
-⭐ _“Applying mathematical optimization, principled software architecture, and AI-driven solutions, continuously learning, and delivering clean, efficient systems are at the core of everything I do.”_
+I hold multiple Microsoft Azure certifications within the .NET and cloud ecosystem:
 
-## Connect with Me
+* **Microsoft Certified: Azure Fundamentals (AZ-900)**
+* **Microsoft Certified: Azure Administrator Associate (AZ-104)**
+* **Microsoft Certified: Azure Developer Associate (AZ-204)**
 
-- **GitHub:** [github.com/ziagham](https://github.com/ziagham)  
-- **LinkedIn:** [linkedin.com/in/aminziagham](https://www.linkedin.com/in/ziagham)  
-- **Email:** [amin.ziagham@outlook.com](mailto:amin.ziagham@outlook.com)  
+These certifications validate my expertise in:
+
+* Cloud Architecture & Infrastructure
+* Azure-native Application Development
+* DevOps & Deployment Strategies
+* Secure & Scalable System Design
+
+## 🌱 Open Source: GenoFlow
+
+**[GenoFlow](https://github.com/genoflow/genoflow)** is my open-source initiative focused on:
+
+> **Bio-Inspired Workflow Automation & Evolutionary Computation**
+
+It merges optimization theory, adaptive systems, and modern engineering practices to explore next-generation workflow orchestration.
+
+## 💡 Engineering Philosophy
+
+I believe in:
+
+* Open-source collaboration
+* Continuous learning & experimentation
+* Mathematical precision in software design
+* AI-enhanced decision systems
+* Writing code that is clean, intentional, and elegant
+
+My goal is simple:
+
+> Build systems that are scalable, intelligent, and architecturally sound — while continuously evolving as an engineer.
+
+
+## 🔗 Let’s Connect
+
+* **GitHub:** [https://github.com/ziagham](https://github.com/ziagham)
+* **LinkedIn:** [https://www.linkedin.com/in/ziagham](https://www.linkedin.com/in/ziagham)
+* **Email:** [amin.ziagham@outlook.com](mailto:amin.ziagham@outlook.com)
+
+⭐ *“Applying mathematical optimization, principled architecture, and AI-driven engineering — while continuously learning — is at the core of everything I build.”*
