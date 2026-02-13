@@ -6,7 +6,7 @@ I’m **Amin Ziagham** — a **Software Engineer** with over **15 years of profe
 
 🎯 I’m a proud member of the **.NET Foundation**, actively supporting and contributing to the open-source ecosystem.
 
-🤖 Currently, I’m expanding my expertise into **AI Engineering**, focusing on artificial intelligence, machine learning, and intelligent system design.
+🤖 Currently, I’m expanding my expertise into **AI Engineering**, focusing on AI, machine learning, and intelligent system design.
 
 ## 🧠 What I Do Best
 
