@@ -39,9 +39,9 @@ These certifications validate my expertise in:
 
 ## 🌱 Open Source: GenoFlow
 
-**[GenoFlow](https://github.com/genoflow/genoflow)** is my open-source initiative focused on:
+**[FlowSynx](https://github.com/flowsynx/flowsynx)** is my open-source initiative focused on:
 
-> **Bio-Inspired Workflow Automation & Evolutionary Computation**
+> **Workflow Automation**
 
 It merges optimization theory, adaptive systems, and modern engineering practices to explore next-generation workflow orchestration.
 
