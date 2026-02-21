@@ -26,9 +26,9 @@ I’m detail-oriented, self-driven, and deeply committed to mastering emerging t
 
 I hold multiple Microsoft Azure certifications within the .NET and cloud ecosystem:
 
-* **Microsoft Certified: Azure Fundamentals (AZ-900)**
-* **Microsoft Certified: Azure Administrator Associate (AZ-104)**
-* **Microsoft Certified: Azure Developer Associate (AZ-204)**
+* [**Microsoft Certified: Azure Fundamentals (AZ-900)**](https://learn.microsoft.com/api/credentials/share/en-us/AminZiagham/D685BF5239F0084A?sharingId=FBCFF8F3F0CB5277)  
+* [**Microsoft Certified: Azure Administrator Associate (AZ-104)**](https://learn.microsoft.com/api/credentials/share/en-us/AminZiagham/C404DAA9350C528C?sharingId=FBCFF8F3F0CB5277)  
+* [**Microsoft Certified: Azure Developer Associate (AZ-204)**](https://learn.microsoft.com/api/credentials/share/en-us/AminZiagham/653AB46A1AC801A9?sharingId=FBCFF8F3F0CB5277)  
 
 These certifications validate my expertise in:
 
