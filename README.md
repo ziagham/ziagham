@@ -1,6 +1,6 @@
 # 👋 Welcome
 
-I’m **Amin Ziagham** — a **Software Engineer** with over **15 years of professional experience** designing and building robust software systems.
+I’m **Amin Ziagham** — a **Software Engineer** with over **15 years of professional experience** designing and building software systems.
 
 🚀 I started programming at **17**, and since then, engineering has been more than a career — it’s been a lifelong passion.
 
