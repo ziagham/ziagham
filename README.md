@@ -35,7 +35,7 @@ These certifications validate my expertise in:
 * DevOps & Deployment Strategies
 * Secure & Scalable System Design
 
-## 🌱 Open Source: GenoFlow
+## 🌱 Open Source: FlowSynx
 
 **[FlowSynx](https://github.com/flowsynx/flowsynx)** is my open-source initiative focused on:
 
