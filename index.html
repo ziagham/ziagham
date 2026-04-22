@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amin Ziagham · Senior Software Engineer → Architect</title>
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Plausible Analytics (replace data-domain) -->
+  <script defer data-domain="ziagham.com" src="https://plausible.io/js/script.js"></script>
+  <!-- Google Analytics (optional) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> ... -->
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      /* Cyan professional theme */
+      --cyan: #00bcd4;
+      --cyan-dark: #00838f;
+      --cyan-deep: #006064;
+      --cyan-soft: #26c6da;
+      --cyan-light-bg: rgba(0, 188, 212, 0.04);
+      
+      --bg: #f4fafb;
+      --surface: #ffffff;
+      --text-primary: #0a1c1f;
+      --text-secondary: #1e3b40;
+      --text-muted: #4b6e74;
+      --accent: var(--cyan);
+      --accent-dark: var(--cyan-dark);
+      --border-light: #cce4e8;
+      --card-shadow: 0 20px 35px -8px rgba(0, 150, 170, 0.08), 0 5px 12px -4px rgba(0,0,0,0.02);
+      --hero-gradient-1: #e0f7fa;
+      --hero-gradient-2: #b2ebf2;
+      --hero-gradient-3: #e0f2f1;
+      --code-bg: #ecf6f7;
+      --badge-bg: #d4f0f5;
+      --toggle-icon: #006064;
+      --cv-timeline: #b2dfdb;
+      --sidebar-bg: #ffffffd9;
+    }
+
+    [data-theme="dark"] {
+      --cyan-deep: #e3f2f5;
+      --bg: #0a1c20;
+      --surface: #123138;
+      --text-primary: #e3f2f5;
+      --text-secondary: #b2dfdb;
+      --text-muted: #80cbc4;
+      --accent: #26c6da;
+      --accent-dark: #00acc1;
+      --border-light: #1f4a52;
+      --card-shadow: 0 20px 30px -10px rgba(0,0,0,0.5);
+      --hero-gradient-1: #0e2a30;
+      --hero-gradient-2: #10373e;
+      --hero-gradient-3: #0d262b;
+      --code-bg: #1a3a40;
+      --badge-bg: #1d464d;
+      --toggle-icon: #80deea;
+      --cv-timeline: #1f5a63;
+      --sidebar-bg: #123138e6;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.6;
+      transition: background 0.25s, color 0.2s;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+        color: var(--text-secondary);
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* navigation */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, var(--cyan), var(--cyan-dark));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-weight: 500;
+      transition: color 0.2s;
+      font-size: 1rem;
+    }
+
+    .nav-links a:hover { color: var(--cyan); }
+
+    .theme-toggle {
+      background: var(--surface);
+      border: 1px solid var(--border-light);
+      border-radius: 40px;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--toggle-icon);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+      transition: 0.2s;
+    }
+    .theme-toggle:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    /* hero with subtle motion */
+    .hero {
+      padding: 2.5rem 2rem 2rem 2rem;
+      position: relative;
+      border-radius: 0 0 2rem 2rem;
+      margin-bottom: 1.5rem;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 40%, var(--hero-gradient-1) 0%, var(--hero-gradient-2) 50%, var(--hero-gradient-3) 90%);
+      background-size: 200% 200%;
+      animation: gentleGradient 18s ease infinite;
+      z-index: -1;
+      border-radius: inherit;
+      opacity: 0.7;
+    }
+
+    @keyframes gentleGradient {
+      0% { background-position: 0% 30%; }
+      50% { background-position: 100% 70%; }
+      100% { background-position: 0% 30%; }
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .hero-text {
+      max-width: 700px;
+    }
+
+    .badge {
+      background: var(--badge-bg);
+      padding: 0.4rem 1.3rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--cyan-deep);
+      display: inline-block;
+      border: 1px solid var(--border-light);
+      backdrop-filter: blur(4px);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 3.2rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.03em;
+    }
+
+    .hero .highlight {
+      color: var(--cyan-dark);
+      border-bottom: 4px solid var(--cyan);
+    }
+
+    .hero-sub {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin: 1rem 0 0.8rem;
+      line-height: 1.5;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 1.8rem;
+    }
+
+    .btn {
+      padding: 0.8rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: 0.2s;
+      border: 1px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--cyan-dark);
+      color: white;
+      box-shadow: 0 8px 18px -6px rgba(0, 188, 212, 0.5);
+    }
+    .btn-primary:hover { background: var(--cyan-deep); transform: translateY(-2px); }
+
+    .btn-outline {
+      border: 1.5px solid var(--border-light);
+      background: transparent;
+      color: var(--text-primary);
+    }
+    .btn-outline:hover { border-color: var(--cyan); background: var(--surface); }
+
+    /* main layout: sidebar + content */
+    .cv-layout {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 2.5rem;
+      margin: 2rem 0 3rem;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      background: var(--sidebar-bg);
+      backdrop-filter: blur(8px);
+      border-radius: 32px;
+      padding: 2rem 1.5rem;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--card-shadow);
+      height: fit-content;
+    }
+
+    /* Gravatar profile image */
+    .profile-avatar {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 1.2rem;
+      border-radius: 50%;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 12px 20px -8px rgba(0,188,212,0.3);
+      border: 3px solid white;
+      background: linear-gradient(145deg, var(--cyan), var(--cyan-dark));
+    }
+
+    .sidebar-name {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.3rem;
+    }
+
+    .sidebar-title {
+      text-align: center;
+      color: var(--cyan-dark);
+      font-weight: 600;
+      margin-bottom: 1.8rem;
+      font-size: 1rem;
+    }
+
+    .sidebar-divider {
+      height: 1px;
+      background: var(--border-light);
+      margin: 1.5rem 0;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+    }
+    .contact-item i {
+      width: 22px;
+      color: var(--cyan-dark);
+      font-size: 1.2rem;
+    }
+
+    .skill-tag {
+      background: var(--badge-bg);
+      padding: 0.5rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid var(--border-light);
+      color: var(--text-primary);
+    }
+
+    .skill-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin: 1.2rem 0;
+    }
+
+    .cert-badge-side {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 0.8rem;
+      font-size: 0.9rem;
+    }
+
+    .lang-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.8rem;
+      font-size: 0.95rem;
+    }
+
+    /* MAIN CONTENT */
+    .main-content {
+      background: var(--surface);
+      border-radius: 32px;
+      padding: 2.5rem 2.2rem;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--card-shadow);
+    }
+
+    .section-title {
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-title i {
+      color: var(--cyan-dark);
+      font-size: 1.6rem;
+    }
+    .section-title span {
+      border-bottom: 3px solid var(--cyan);
+      padding-bottom: 6px;
+    }
+
+    .exp-item {
+      margin-bottom: 2.2rem;
+      border-left: 2px solid var(--cv-timeline);
+      padding-left: 1.8rem;
+      position: relative;
+    }
+    .exp-item::before {
+      content: '';
+      width: 14px;
+      height: 14px;
+      background: var(--cyan);
+      border-radius: 50%;
+      position: absolute;
+      left: -8px;
+      top: 6px;
+      border: 3px solid var(--surface);
+    }
+
+    .exp-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+    .exp-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+    .exp-company {
+      color: var(--cyan-dark);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .exp-date {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .exp-desc {
+      margin-top: 0.5rem;
+      color: var(--text-secondary);
+      list-style: none;
+    }
+    .exp-desc li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 10px;
+    }
+    .exp-desc i {
+      color: var(--cyan);
+      font-size: 0.9rem;
+      margin-top: 0.3rem;
+    }
+
+    .highlight-box {
+      background: var(--code-bg);
+      padding: 1.8rem;
+      border-radius: 20px;
+      margin: 2rem 0 1rem;
+      border-left: 5px solid var(--cyan);
+      font-style: italic;
+    }
+
+    /* Education card */
+    .edu-card {
+      background: var(--code-bg);
+      border-radius: 20px;
+      padding: 1.5rem 1.8rem;
+      margin: 1.8rem 0;
+      border: 1px solid var(--border-light);
+    }
+    .edu-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .edu-icon {
+      font-size: 2rem;
+      color: var(--cyan-dark);
+    }
+
+    /* Publications list */
+    .pub-item {
+      margin-bottom: 1.8rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dashed var(--border-light);
+    }
+    .pub-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .pub-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+      color: var(--text-primary);
+    }
+    .pub-meta {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+    .pub-meta i {
+      margin-right: 5px;
+      color: var(--cyan-dark);
+    }
+    .pub-desc {
+      color: var(--text-secondary);
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .cert-card-mini {
+      background: var(--code-bg);
+      padding: 1rem;
+      border-radius: 16px;
+      border: 1px solid var(--border-light);
+    }
+
+    .architect-badge {
+      background: linear-gradient(145deg, var(--cyan), var(--cyan-dark));
+      color: white;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-left: 0.8rem;
+    }
+
+    .footer {
+      margin-top: 2rem;
+      padding: 2rem 0;
+      border-top: 1px solid var(--border-light);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .social-links a {
+      color: var(--text-secondary);
+      font-size: 1.5rem;
+      margin-left: 1.5rem;
+      transition: color 0.2s;
+    }
+    .social-links a:hover { color: var(--cyan); }
+
+    @media (max-width: 800px) {
+      .cv-layout { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.5rem; }
+      .navbar { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navigation -->
+    <nav class="navbar">
+      <span class="logo">Amin Ziagham</span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#certifications">Certs</a>
+        <div class="theme-toggle" id="themeToggle" aria-label="Dark/Light mode">
+          <i class="fas fa-moon"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <span class="badge"><i class="fas fa-crown"></i> Senior Software Engineer · Path to Architect</span>
+          <h1>Engineering <span class="highlight">Precise and Reliable</span> Systems</h1>
+          <div class="hero-sub">
+            Engineering Precise and Reliable Systems with a focus on robustness, scalability, and high‑quality software design principles.
+          </div>
+          <div class="hero-cta">
+            <a href="#experience" class="btn btn-primary"><i class="fas fa-briefcase"></i> View experience</a>
+            <a href="https://github.com/ziagham" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/ziagham" target="_blank" class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+        <div style="font-size: 3.5rem; color: var(--cyan-dark); opacity: 0.3;">
+          <i class="fas fa-microchip"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- CV Layout: Sidebar + Main -->
+    <div class="cv-layout">
+      <!-- SIDEBAR with Gravatar -->
+      <aside class="sidebar">
+        <!-- Gravatar image using email amin.ziagham@outlook.com -->
+        <img class="profile-avatar" src="https://0.gravatar.com/avatar/7fd4f9885a3e81e8ff61231259392cda1355b7e570a20914decd31927a50ca6a?s=256&d=initials" alt="Amin Ziagham Gravatar">
+        <div class="sidebar-name">Amin Ziagham</div>
+        <div class="sidebar-title"><i class="fas fa-map-pin"></i> Senior Software Engineer</div>
+        
+        <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:amin.ziagham@outlook.com">amin.ziagham@outlook.com</a></div>
+        <div class="contact-item"><i class="fab fa-github"></i> <a target="_blank" href="https://github.com/ziagham">github.com/ziagham</a></div>
+        <div class="contact-item"><i class="fab fa-linkedin"></i> <a target="_blank" href="https://linkedin.com/in/ziagham">linkedin.com/in/ziagham</a></div>
+        
+        <div class="sidebar-divider"></div>
+        
+        <h4 style="margin-bottom: 1rem; display: flex; gap:8px;"><i class="fas fa-code"></i> Core expertise</h4>
+        <div class="skill-cloud">
+          <span class="skill-tag"><i class="fab fa-microsoft"></i> C#/.NET</span>
+          <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure</span>
+          <span class="skill-tag"><i class="fas fa-cubes"></i> Microservices</span>
+          <span class="skill-tag"><i class="fas fa-brain"></i> AI/ML</span>
+          <span class="skill-tag"><i class="fas fa-chart-line"></i> Optimization</span>
+          <span class="skill-tag"><i class="fas fa-cloud"></i> Cloud-native</span>
+          <span class="skill-tag"><i class="fas fa-project-diagram"></i> DDD/CQRS</span>
+          <span class="skill-tag"><i class="fas fa-code-branch"></i> DevOps</span>
+        </div>
+        
+        <div class="sidebar-divider"></div>
+        <h4 style="margin-bottom: 1rem;"><i class="fas fa-certificate"></i> Top certifications</h4>
+        <div class="cert-badge-side"><i class="fab fa-microsoft"></i> AZ-900 Fundamentals</div>
+        <div class="cert-badge-side"><i class="fab fa-microsoft"></i> AZ-104 Administrator</div>
+        <div class="cert-badge-side"><i class="fab fa-microsoft"></i> AZ-204 Developer</div>
+        
+        <div class="sidebar-divider"></div>
+        <h4 style="margin-bottom: 1rem; display: flex; gap:8px;"><i class="fas fa-language"></i> Languages</h4>
+        <div class="lang-item"><span>🇺🇸 English</span> <span style="color: var(--text-muted);">Fluent</span></div>
+        <div class="lang-item"><span>🇮🇷 Farsi (Persian)</span> <span style="color: var(--text-muted);">Native</span></div>
+        <div class="lang-item"><span>🇸🇦 Arabic</span> <span style="color: var(--text-muted);">Intermediate</span></div>
+        <div class="lang-item"><span>🇳🇴 Norwegian</span> <span style="color: var(--text-muted);">Elementary</span></div>
+
+        <div class="sidebar-divider"></div>
+        <div style="font-size:0.9rem; color: var(--text-muted);">
+          <i class="fas fa-quote-right"></i> “Mathematical precision meets clean architecture”
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="main-content" id="about">
+        <!-- Summary -->
+        <section>
+          <div class="section-title"><i class="fas fa-user-astronaut"></i><span>Professional profile</span></div>
+          <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+            <strong>.NET Foundation member</strong> with over 15 years of experience. I blend architectural thinking with hands‑on engineering — currently transitioning toward Software Architect. My work spans scalable cloud systems, mathematical optimization, and AI‑driven solutions.
+          </p>
+          <div class="highlight-box">
+            <i class="fas fa-quote-left" style="margin-right: 8px; opacity: 0.7; color: var(--cyan);"></i> 
+            Applying mathematical optimization, principled architecture, and AI‑driven engineering — while continuously learning — is at the core of everything I build.
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" style="margin-top: 2.5rem;">
+          <div class="section-title"><i class="fas fa-briefcase"></i><span>Most recent professional experience</span></div>
+          
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-title">Senior Software Engineer</span>
+              <span class="exp-date">2022 – Present</span>
+            </div>
+            <div class="exp-company"><i class="fas fa-building"></i> GE HealthCare | Norway</div>
+            <ul class="exp-desc">
+              <li><i class="fas fa-chevron-right"></i> Design and implement software for cardiology and ultrasound devices, as well as associated 
+                digital healthcare platforms. This includes developing reliable, high-performance applications that support medical imaging workflows 
+                and device integration. The work involves close collaboration with domain experts to ensure clinical accuracy, regulatory compliance, 
+                and usability in healthcare environments. Additionally, it covers the development of backend services and APIs that enable secure data 
+                exchange, interoperability between systems, and integration with imaging standards such as DICOM.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-title">Scientific Researcher</span>
+              <span class="exp-date">2020 – 2022</span>
+            </div>
+            <div class="exp-company"><i class="fas fa-building"></i> UiT- The Arctic University of Norway | Norway</div>
+            <ul class="exp-desc">
+              <li><i class="fas fa-chevron-right"></i> Research Assistant at the Arctic Green Computing Group at the Arctic University of Norway, 
+                conducting research on techno-economic modeling approaches to evaluate the value of data center flexibility within sustainable 
+                electrical energy systems. The work focuses on optimizing energy consumption and task scheduling across data centers distributed 
+                in different time zones and interconnected at both national and international levels. The project aims to support grid balancing 
+                and enhance the integration of intermittent renewable energy sources, while also providing more cost-effective strategies for 
+                managing peak demand by reducing or deferring the need for expensive investments in power grid expansion.</li>
+            </ul>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-header">
+              <span class="exp-title">Software Engineer</span>
+              <span class="exp-date">2017 – 2020</span>
+            </div>
+            <div class="exp-company"><i class="fas fa-building"></i> SSPE - South Steel Pishgaman Consultant Engineers | Iran</div>
+            <ul class="exp-desc">
+              <li><i class="fas fa-chevron-right"></i> Software Development Engineer in the Information Technology Department at Khuzestan Steel Company (KSC). 
+                Responsible for designing and developing new software systems using Microsoft technologies, including Microsoft TFS, .NET Core/Framework, 
+                ASP.NET MVC, Web API, SignalR, and SQL Server. Involved in requirements analysis and end-to-end management of the software development lifecycle (SDLC), 
+                as well as training and supporting other developers.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Education section -->
+        <section id="education" style="margin-top: 2.5rem;">
+          <div class="section-title"><i class="fas fa-graduation-cap"></i><span>Education</span></div>
+          <div class="edu-card">
+            <div class="edu-item">
+              <div class="edu-icon"><i class="fas fa-university"></i></div>
+              <div>
+                <h3 style="font-size: 1.3rem; margin-bottom: 0.25rem;">M.Sc. Computer Science</h3>
+                <p style="color: var(--cyan-dark); font-weight: 500; margin-bottom: 0.5rem;"><a href="https://uit.no">The Arctic University of Norway</a></p>
+                <p style="color: var(--text-muted); font-size: 0.95rem;"><i class="far fa-calendar-alt"></i> 2020 – 2022</p>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">
+                    <b>Focus areas:</b><br />
+                    Algorithms, System design, Software architecture fundamentals, Distributeed Systems, Green computing, and Mathematical optimization.
+                </p>
+                <p style="margin-top: 1rem; color: var(--text-secondary);">
+                    <b>Thesis:</b><br />
+                    <a href="https://nva.sikt.no/registration/0198f4c0c78b-a427ff45-2a95-4e5d-a2c8-d39cdaeaa092" target="_blank">
+                        Budget-aware scheduling algorithm for scientific workflow applications across multiple clouds. A Mathematical Optimization-Based Approach
+                    </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 0.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <span class="skill-tag"><i class="fas fa-book-open"></i> Continuous learner</span>
+            <span class="skill-tag"><i class="fas fa-microchip"></i> AI Engineering</span>
+            <span class="skill-tag"><i class="fas fa-cloud-upload-alt"></i> Cloud patterns</span>
+          </div>
+        </section>
+
+        <!-- Publications section (NEW) -->
+        <section id="publications" style="margin-top: 2.5rem;">
+            <div class="section-title"><i class="fas fa-pen-fancy"></i><span>Publications</span></div>
+            
+            <div class="pub-item">
+                <div class="pub-title">VEDA-moVE DAta to Balance the Grid: Research Directions and Recommendations for Exploiting Data Centers Flexibility Within the Power System</div>
+                <div class="pub-meta">
+                <span><i class="far fa-newspaper"></i> ACM International Conference on Systems, Control and Communications</span>
+                <span><i class="far fa-calendar-alt"></i> March 2022 | <a href="https://doi.org/10.1145/3510362.3510365" target="_blank">https://doi.org/10.1145/3510362.3510365</a></span>
+                </div>
+                <p class="pub-desc">This paper aims at discussing visions and research directions to investigate the value 
+                    of data centers flexibility within sustainable electrical energy systems. While optimizing the energy 
+                    consumption and task scheduling within data centers located in different time zones and connected at 
+                    national and international level, it is possible to balance the local power grids, to allow a better 
+                    penetration of intermittent renewable energy sources, and a more economical way to address peak demand 
+                    by avoiding or postponing costly investments in network expansion. Challenges and opportunities that 
+                    lie behind the exploitation of data centers flexibility within sustainable electrical energy systems 
+                    will be discussed. An interdisciplinary approach to tackle these kind of problems will be proposed, 
+                    and visions for a novel framework called VEDA (moVE DAta to balance the grid) will be outlined.</p>
+            </div>
+    
+            <div class="pub-item">
+                <div class="pub-title">Sustainable and decarbonized data-center facilities: A socio-techno-economic discussion</div>
+                <div class="pub-meta">
+                <span><i class="fas fa-book"></i> IEEE PES ISGT Innovative Smart Grid Technologies Conference</span>
+                <span><i class="far fa-calendar-alt"></i> June 2021 | <a href="https://doi.org/10.1109/ISGTAsia49270.2021.9715647" target="_blank">https://doi.org/10.1109/ISGTAsia49270.2021.9715647</a></span>
+                </div>
+                <p class="pub-desc">Data centers are considered the information backbone of the modern digital society. 
+                    Everyday life is now intertwined with digital tools and platforms such as mobile (smart) phones, 
+                    high-powered personal computers, cyber-physical gadgets, etc. These tools rely on data centers. 
+                    In the modern digital society, the concept of sustainable development includes energy-efficient, 
+                    energy waste recovery, and climate aware process of digitization. Modern and digital power system 
+                    operations would rely more on the data centers. This is a conceptual paper that discusses 
+                    socio-techno-economic aspects to better utilize the data centers in a sustainable way. Broad 
+                    guidelines are provided on the key features to be considered to build novel decision-support 
+                    system tools for the optimal integration of data centers within power systems.</p>
+            </div>
+    
+            <div class="pub-item">
+                <div class="pub-title">MOSIC: Mobility-Aware Single-Hop Clustering Scheme for Vehicular Ad hoc Networks on Highways</div>
+                <div class="pub-meta">
+                <span><i class="fab fa-dev"></i> International Journal of Advanced Computer Science and Applications(IJACSA)</span>
+                <span><i class="far fa-calendar-alt"></i> 2016 | <a href="http://dx.doi.org/10.14569/IJACSA.2016.070957" target="_blank">http://dx.doi.org/10.14569/IJACSA.2016.070957</a></span>
+                </div>
+                <p class="pub-desc">As a new branch of Mobile ad hoc networks, Vehicular ad hoc networks (VANETs) 
+                    have significant attention in academic and industry researches. Because of high dynamic nature 
+                    of VANET, the topology will be changed frequently and quickly, and this condition is causing 
+                    some difficulties in maintaining topology of these kinds of networks. Clustering is one of the 
+                    controlling mechanism that able to grouping vehicles in same categories based upon some predefined 
+                    metrics such as density, geographical locations, direction and velocity of vehicles. Using of 
+                    clustering can make network’s global topology less dynamic and improve the scalability of it. 
+                    Many of the VANET clustering algorithms are taken from MANET that has been shown that these 
+                    algorithms are not suitable for VANET. Hence, in this paper we proposed a new clustering scheme 
+                    that use Gauss Markov mobility (GMM) model for mobility predication that make vehicle able to 
+                    prognosticate its mobility relative to its neighbors. The proposed clustering scheme’s goal is 
+                    forming stable clusters by increasing the cluster head lifetime and less cluster head changes number. 
+                    Simulation results show that the proposed scheme has better performance than existing clustering 
+                    approach, in terms of cluster head duration, cluster member duration, cluster head changes rate 
+                    and control overhead.</p>
+            </div>
+
+            </section>
+
+        <!-- Open Source & Certifications -->
+        <section style="margin-top: 2.5rem;" id="certifications">
+          <div class="section-title"><i class="fas fa-trophy"></i><span>Credentials</span></div>
+          <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
+            <div style="flex:2;">
+              <div class="cert-grid">
+                <div class="cert-card-mini"><i class="fab fa-microsoft"></i> <strong>AZ-900</strong><br><small>Azure Fundamentals</small></div>
+                <div class="cert-card-mini"><i class="fab fa-microsoft"></i> <strong>AZ-104</strong><br><small>Administrator</small></div>
+                <div class="cert-card-mini"><i class="fab fa-microsoft"></i> <strong>AZ-204</strong><br><small>Developer</small></div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 1.5rem;">
+            <span class="architect-badge"><i class="fas fa-arrow-trend-up"></i> Evolving into Software Architect</span>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>
+        <p style="font-weight: 600; font-size: 1.2rem;">Amin Ziagham</p>
+        <p style="color: var(--text-muted);">Senior Software Engineer → Architect</p>
+      </div>
+      <div class="social-links">
+        <a href="https://github.com/ziagham" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ziagham" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:amin.ziagham@outlook.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </footer>
+    <div style="text-align: center; padding: 1rem 0 2rem; color: var(--text-muted);">
+      © 2026 · Ziagham.Com
+    </div>
+  </div>
+
+  <!-- Theme toggle -->
+  <script>
+    (function() {
+      const toggleBtn = document.getElementById('themeToggle');
+      const icon = toggleBtn.querySelector('i');
+      const html = document.documentElement;
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+        icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+      }
+
+      const storedTheme = localStorage.getItem('theme');
+      const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(storedTheme || (systemPrefersDark ? 'dark' : 'light'));
+
+      toggleBtn.addEventListener('click', () => {
+        const current = html.getAttribute('data-theme');
+        setTheme(current === 'dark' ? 'light' : 'dark');
+      });
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) setTheme(e.matches ? 'dark' : 'light');
+      });
+    })();
+  </script>
+</body>
+</html>
