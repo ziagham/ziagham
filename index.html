@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Amin Ziagham · Senior Software Engineer → Architect</title>
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,6 @@
   
   <!-- Plausible Analytics (replace data-domain) -->
   <script defer data-domain="ziagham.com" src="https://plausible.io/js/script.js"></script>
-  <!-- Google Analytics (optional) -->
-  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script> ... -->
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -77,6 +75,11 @@
 
     a {
         color: var(--text-secondary);
+        text-decoration: underline;
+        transition: color 0.2s;
+    }
+    a:hover { 
+      color: var(--cyan); 
     }
 
     .container {
@@ -92,6 +95,8 @@
       align-items: center;
       padding: 1.2rem 0;
       border-bottom: 1px solid var(--border-light);
+      gap: 1rem;
+      flex-wrap: wrap;
     }
 
     .logo {
@@ -106,8 +111,9 @@
 
     .nav-links {
       display: flex;
-      gap: 2.5rem;
+      gap: 1.5rem;
       align-items: center;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -115,7 +121,8 @@
       color: var(--text-secondary);
       font-weight: 500;
       transition: color 0.2s;
-      font-size: 1rem;
+      font-size: 0.95rem;
+      white-space: nowrap;
     }
 
     .nav-links a:hover { color: var(--cyan); }
@@ -138,7 +145,7 @@
 
     /* hero with subtle motion */
     .hero {
-      padding: 2.5rem 2rem 2rem 2rem;
+      padding: 2rem 1.5rem;
       position: relative;
       border-radius: 0 0 2rem 2rem;
       margin-bottom: 1.5rem;
@@ -173,13 +180,14 @@
 
     .hero-text {
       max-width: 700px;
+      flex: 1;
     }
 
     .badge {
       background: var(--badge-bg);
       padding: 0.4rem 1.3rem;
       border-radius: 40px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       font-weight: 600;
       color: var(--cyan-deep);
       display: inline-block;
@@ -215,7 +223,7 @@
     }
 
     .btn {
-      padding: 0.8rem 1.8rem;
+      padding: 0.75rem 1.5rem;
       border-radius: 60px;
       font-weight: 600;
       text-decoration: none;
@@ -224,6 +232,7 @@
       gap: 8px;
       transition: 0.2s;
       border: 1px solid transparent;
+      font-size: 0.95rem;
     }
 
     .btn-primary {
@@ -244,7 +253,7 @@
     .cv-layout {
       display: grid;
       grid-template-columns: 300px 1fr;
-      gap: 2.5rem;
+      gap: 2rem;
       margin: 2rem 0 3rem;
     }
 
@@ -259,10 +268,11 @@
       height: fit-content;
     }
 
-    /* Gravatar profile image */
     .profile-avatar {
       width: 180px;
-      height: 180px;
+      max-width: 70%;
+      height: auto;
+      aspect-ratio: 1/1;
       margin: 0 auto 1.2rem;
       border-radius: 50%;
       display: block;
@@ -274,7 +284,7 @@
 
     .sidebar-name {
       text-align: center;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       font-weight: 700;
       letter-spacing: -0.02em;
       margin-bottom: 0.3rem;
@@ -285,7 +295,7 @@
       color: var(--cyan-dark);
       font-weight: 600;
       margin-bottom: 1.8rem;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
     .sidebar-divider {
@@ -300,22 +310,27 @@
       gap: 12px;
       margin-bottom: 1rem;
       color: var(--text-secondary);
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      word-break: break-word;
     }
     .contact-item i {
       width: 22px;
       color: var(--cyan-dark);
       font-size: 1.2rem;
+      flex-shrink: 0;
     }
 
     .skill-tag {
       background: var(--badge-bg);
-      padding: 0.5rem 1.2rem;
+      padding: 0.5rem 1rem;
       border-radius: 40px;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 500;
       border: 1px solid var(--border-light);
       color: var(--text-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .skill-cloud {
@@ -330,7 +345,7 @@
       align-items: center;
       gap: 8px;
       margin-bottom: 0.8rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     .lang-item {
@@ -338,30 +353,32 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 0.8rem;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
     }
 
     /* MAIN CONTENT */
     .main-content {
       background: var(--surface);
       border-radius: 32px;
-      padding: 2.5rem 2.2rem;
+      padding: 2rem 1.8rem;
       border: 1px solid var(--border-light);
       box-shadow: var(--card-shadow);
     }
 
     .section-title {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      margin-bottom: 1.8rem;
+      margin-bottom: 1.5rem;
       display: flex;
       align-items: center;
       gap: 10px;
+      flex-wrap: wrap;
     }
     .section-title i {
       color: var(--cyan-dark);
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
     .section-title span {
       border-bottom: 3px solid var(--cyan);
@@ -369,9 +386,9 @@
     }
 
     .exp-item {
-      margin-bottom: 2.2rem;
+      margin-bottom: 2rem;
       border-left: 2px solid var(--cv-timeline);
-      padding-left: 1.8rem;
+      padding-left: 1.5rem;
       position: relative;
     }
     .exp-item::before {
@@ -392,9 +409,10 @@
       align-items: baseline;
       justify-content: space-between;
       margin-bottom: 0.5rem;
+      gap: 8px;
     }
     .exp-title {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       font-weight: 700;
     }
     .exp-company {
@@ -403,56 +421,59 @@
       display: flex;
       align-items: center;
       gap: 5px;
+      font-size: 0.9rem;
     }
     .exp-date {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       font-weight: 400;
     }
     .exp-desc {
-      margin-top: 0.5rem;
+      margin-top: 0.6rem;
       color: var(--text-secondary);
       list-style: none;
     }
     .exp-desc li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.6rem;
       display: flex;
       gap: 10px;
+      font-size: 0.95rem;
     }
     .exp-desc i {
       color: var(--cyan);
-      font-size: 0.9rem;
-      margin-top: 0.3rem;
+      font-size: 0.85rem;
+      margin-top: 0.2rem;
+      flex-shrink: 0;
     }
 
     .highlight-box {
       background: var(--code-bg);
-      padding: 1.8rem;
+      padding: 1.5rem;
       border-radius: 20px;
-      margin: 2rem 0 1rem;
+      margin: 1.8rem 0 1rem;
       border-left: 5px solid var(--cyan);
       font-style: italic;
+      font-size: 0.95rem;
     }
 
-    /* Education card */
     .edu-card {
       background: var(--code-bg);
       border-radius: 20px;
-      padding: 1.5rem 1.8rem;
-      margin: 1.8rem 0;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
       border: 1px solid var(--border-light);
     }
     .edu-item {
       display: flex;
       align-items: flex-start;
       gap: 1rem;
+      flex-wrap: wrap;
     }
     .edu-icon {
       font-size: 2rem;
       color: var(--cyan-dark);
     }
 
-    /* Publications list */
     .pub-item {
       margin-bottom: 1.8rem;
       padding-bottom: 1.5rem;
@@ -464,7 +485,7 @@
       padding-bottom: 0;
     }
     .pub-title {
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 0.3rem;
       color: var(--text-primary);
@@ -472,9 +493,10 @@
     .pub-meta {
       display: flex;
       flex-wrap: wrap;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
       margin-bottom: 0.5rem;
+      gap: 12px;
     }
     .pub-meta i {
       margin-right: 5px;
@@ -482,11 +504,12 @@
     }
     .pub-desc {
       color: var(--text-secondary);
+      font-size: 0.95rem;
     }
 
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
       gap: 1rem;
       margin-top: 1rem;
     }
@@ -495,6 +518,7 @@
       padding: 1rem;
       border-radius: 16px;
       border: 1px solid var(--border-light);
+      text-align: center;
     }
 
     .architect-badge {
@@ -505,7 +529,6 @@
       font-weight: 600;
       font-size: 0.85rem;
       display: inline-block;
-      margin-left: 0.8rem;
     }
 
     .footer {
@@ -520,16 +543,209 @@
 
     .social-links a {
       color: var(--text-secondary);
-      font-size: 1.5rem;
-      margin-left: 1.5rem;
+      font-size: 1.4rem;
+      margin-left: 1.2rem;
       transition: color 0.2s;
     }
     .social-links a:hover { color: var(--cyan); }
 
-    @media (max-width: 800px) {
-      .cv-layout { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 2.5rem; }
-      .navbar { flex-wrap: wrap; }
+    /* ========== ENHANCED RESPONSIVE BREAKPOINTS ========== */
+    @media (max-width: 900px) {
+      .cv-layout {
+        gap: 1.5rem;
+      }
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.2rem;
+      }
+      .cv-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .sidebar {
+        max-width: 500px;
+        margin: 0 auto;
+        width: 100%;
+      }
+      .main-content {
+        padding: 1.8rem;
+      }
+      .hero {
+        padding: 1.5rem;
+      }
+      .hero h1 {
+        font-size: 2.3rem;
+      }
+      .hero-sub {
+        font-size: 1rem;
+      }
+      .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+      }
+      .nav-links {
+        justify-content: center;
+        gap: 1.2rem;
+      }
+      .nav-links a {
+        white-space: normal;
+      }
+      .theme-toggle {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      .hero-cta {
+        justify-content: center;
+      }
+      .hero .hero-text {
+        text-align: center;
+      }
+      .hero .badge {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      /* hide decorative icon on mobile for cleaner look */
+      .hero-content > div:last-child {
+        display: none;
+      }
+      .exp-header {
+        flex-direction: column;
+        gap: 4px;
+      }
+      .exp-title {
+        font-size: 1.15rem;
+      }
+      .section-title {
+        font-size: 1.4rem;
+      }
+      .profile-avatar {
+        width: 140px;
+      }
+      .sidebar-name {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 0 1rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .badge {
+        font-size: 0.75rem;
+        padding: 0.3rem 1rem;
+      }
+      .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+      }
+      .main-content {
+        padding: 1.5rem;
+      }
+      .section-title i {
+        font-size: 1.3rem;
+      }
+      .exp-item {
+        padding-left: 1rem;
+      }
+      .pub-title {
+        font-size: 1rem;
+      }
+      .pub-meta {
+        flex-direction: column;
+        gap: 5px;
+      }
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .social-links a {
+        margin: 0 0.8rem;
+      }
+      .contact-item {
+        font-size: 0.85rem;
+        word-break: break-all;
+      }
+      .skill-tag {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.9rem;
+      }
+      .highlight-box {
+        padding: 1.2rem;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero-cta {
+        gap: 0.8rem;
+      }
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+      .hero-cta {
+        flex-direction: column;
+        width: 100%;
+      }
+      .navbar .logo {
+        font-size: 1.5rem;
+      }
+      .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .sidebar {
+        padding: 1.5rem 1rem;
+      }
+      .main-content {
+        padding: 1.2rem;
+      }
+      .edu-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .exp-desc li {
+        font-size: 0.9rem;
+      }
+      .section-title span {
+        font-size: 1.2rem;
+      }
+      .architect-badge {
+        font-size: 0.75rem;
+        text-align: center;
+        display: inline-block;
+        width: auto;
+      }
+    }
+
+    /* Fix for long links and overflow */
+    .contact-item a {
+      word-break: break-all;
+      overflow-wrap: break-word;
+    }
+    img, iframe {
+      max-width: 100%;
     }
   </style>
 </head>
@@ -565,7 +781,7 @@
             <a href="https://www.linkedin.com/in/ziagham" target="_blank" class="btn btn-outline"><i class="fab fa-linkedin"></i> LinkedIn</a>
           </div>
         </div>
-        <div style="font-size: 3.5rem; color: var(--cyan-dark); opacity: 0.3;">
+        <div style="font-size: 3rem; color: var(--cyan-dark); opacity: 0.3;">
           <i class="fas fa-microchip"></i>
         </div>
       </div>
@@ -575,7 +791,6 @@
     <div class="cv-layout">
       <!-- SIDEBAR with Gravatar -->
       <aside class="sidebar">
-        <!-- Gravatar image using email amin.ziagham@outlook.com -->
         <img class="profile-avatar" src="https://0.gravatar.com/avatar/7fd4f9885a3e81e8ff61231259392cda1355b7e570a20914decd31927a50ca6a?s=256&d=initials" alt="Amin Ziagham Gravatar">
         <div class="sidebar-name">Amin Ziagham</div>
         <div class="sidebar-title"><i class="fas fa-map-pin"></i> Senior Software Engineer</div>
@@ -612,7 +827,7 @@
         <div class="lang-item"><span>🇳🇴 Norwegian</span> <span style="color: var(--text-muted);">Elementary</span></div>
 
         <div class="sidebar-divider"></div>
-        <div style="font-size:0.9rem; color: var(--text-muted);">
+        <div style="font-size:0.85rem; color: var(--text-muted);">
           <i class="fas fa-quote-right"></i> “Mathematical precision meets clean architecture”
         </div>
       </aside>
@@ -642,11 +857,7 @@
             </div>
             <div class="exp-company"><i class="fas fa-building"></i> GE HealthCare | Norway</div>
             <ul class="exp-desc">
-              <li><i class="fas fa-chevron-right"></i> Design and implement software for cardiology and ultrasound devices, as well as associated 
-                digital healthcare platforms. This includes developing reliable, high-performance applications that support medical imaging workflows 
-                and device integration. The work involves close collaboration with domain experts to ensure clinical accuracy, regulatory compliance, 
-                and usability in healthcare environments. Additionally, it covers the development of backend services and APIs that enable secure data 
-                exchange, interoperability between systems, and integration with imaging standards such as DICOM.</li>
+              <li><i class="fas fa-chevron-right"></i> Design and implement software for cardiology and ultrasound devices, as well as associated digital healthcare platforms. This includes developing reliable, high-performance applications that support medical imaging workflows and device integration. The work involves close collaboration with domain experts to ensure clinical accuracy, regulatory compliance, and usability in healthcare environments. Additionally, it covers the development of backend services and APIs that enable secure data exchange, interoperability between systems, and integration with imaging standards such as DICOM.</li>
             </ul>
           </div>
 
@@ -657,12 +868,7 @@
             </div>
             <div class="exp-company"><i class="fas fa-building"></i> UiT- The Arctic University of Norway | Norway</div>
             <ul class="exp-desc">
-              <li><i class="fas fa-chevron-right"></i> Research Assistant at the Arctic Green Computing Group at the Arctic University of Norway, 
-                conducting research on techno-economic modeling approaches to evaluate the value of data center flexibility within sustainable 
-                electrical energy systems. The work focuses on optimizing energy consumption and task scheduling across data centers distributed 
-                in different time zones and interconnected at both national and international levels. The project aims to support grid balancing 
-                and enhance the integration of intermittent renewable energy sources, while also providing more cost-effective strategies for 
-                managing peak demand by reducing or deferring the need for expensive investments in power grid expansion.</li>
+              <li><i class="fas fa-chevron-right"></i> Research Assistant at the Arctic Green Computing Group at the Arctic University of Norway, conducting research on techno-economic modeling approaches to evaluate the value of data center flexibility within sustainable electrical energy systems. The work focuses on optimizing energy consumption and task scheduling across data centers distributed in different time zones and interconnected at both national and international levels. The project aims to support grid balancing and enhance the integration of intermittent renewable energy sources, while also providing more cost-effective strategies for managing peak demand by reducing or deferring the need for expensive investments in power grid expansion.</li>
             </ul>
           </div>
 
@@ -673,10 +879,7 @@
             </div>
             <div class="exp-company"><i class="fas fa-building"></i> SSPE - South Steel Pishgaman Consultant Engineers | Iran</div>
             <ul class="exp-desc">
-              <li><i class="fas fa-chevron-right"></i> Software Development Engineer in the Information Technology Department at Khuzestan Steel Company (KSC). 
-                Responsible for designing and developing new software systems using Microsoft technologies, including Microsoft TFS, .NET Core/Framework, 
-                ASP.NET MVC, Web API, SignalR, and SQL Server. Involved in requirements analysis and end-to-end management of the software development lifecycle (SDLC), 
-                as well as training and supporting other developers.</li>
+              <li><i class="fas fa-chevron-right"></i> Software Development Engineer in the Information Technology Department at Khuzestan Steel Company (KSC). Responsible for designing and developing new software systems using Microsoft technologies, including Microsoft TFS, .NET Core/Framework, ASP.NET MVC, Web API, SignalR, and SQL Server. Involved in requirements analysis and end-to-end management of the software development lifecycle (SDLC), as well as training and supporting other developers.</li>
             </ul>
           </div>
         </section>
@@ -688,12 +891,12 @@
             <div class="edu-item">
               <div class="edu-icon"><i class="fas fa-university"></i></div>
               <div>
-                <h3 style="font-size: 1.3rem; margin-bottom: 0.25rem;">M.Sc. Computer Science</h3>
+                <h3 style="font-size: 1.25rem; margin-bottom: 0.25rem;">M.Sc. Computer Science</h3>
                 <p style="color: var(--cyan-dark); font-weight: 500; margin-bottom: 0.5rem;"><a href="https://uit.no">The Arctic University of Norway</a></p>
-                <p style="color: var(--text-muted); font-size: 0.95rem;"><i class="far fa-calendar-alt"></i> 2020 – 2022</p>
+                <p style="color: var(--text-muted); font-size: 0.9rem;"><i class="far fa-calendar-alt"></i> 2020 – 2022</p>
                 <p style="margin-top: 1rem; color: var(--text-secondary);">
                     <b>Focus areas:</b><br />
-                    Algorithms, System design, Software architecture fundamentals, Distributeed Systems, Green computing, and Mathematical optimization.
+                    Algorithms, System design, Software architecture fundamentals, Distributed Systems, Green computing, and Mathematical optimization.
                 </p>
                 <p style="margin-top: 1rem; color: var(--text-secondary);">
                     <b>Thesis:</b><br />
@@ -704,14 +907,14 @@
               </div>
             </div>
           </div>
-          <div style="margin-top: 0.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+          <div style="margin-top: 0.5rem; display: flex; gap: 0.8rem; flex-wrap: wrap;">
             <span class="skill-tag"><i class="fas fa-book-open"></i> Continuous learner</span>
             <span class="skill-tag"><i class="fas fa-microchip"></i> AI Engineering</span>
             <span class="skill-tag"><i class="fas fa-cloud-upload-alt"></i> Cloud patterns</span>
           </div>
         </section>
 
-        <!-- Publications section (NEW) -->
+        <!-- Publications section -->
         <section id="publications" style="margin-top: 2.5rem;">
             <div class="section-title"><i class="fas fa-pen-fancy"></i><span>Publications</span></div>
             
@@ -722,14 +925,14 @@
                 <span><i class="far fa-calendar-alt"></i> March 2022 | <a href="https://doi.org/10.1145/3510362.3510365" target="_blank">https://doi.org/10.1145/3510362.3510365</a></span>
                 </div>
                 <p class="pub-desc">This paper aims at discussing visions and research directions to investigate the value 
-                    of data centers flexibility within sustainable electrical energy systems. While optimizing the energy 
-                    consumption and task scheduling within data centers located in different time zones and connected at 
-                    national and international level, it is possible to balance the local power grids, to allow a better 
-                    penetration of intermittent renewable energy sources, and a more economical way to address peak demand 
-                    by avoiding or postponing costly investments in network expansion. Challenges and opportunities that 
-                    lie behind the exploitation of data centers flexibility within sustainable electrical energy systems 
-                    will be discussed. An interdisciplinary approach to tackle these kind of problems will be proposed, 
-                    and visions for a novel framework called VEDA (moVE DAta to balance the grid) will be outlined.</p>
+                  of data centers flexibility within sustainable electrical energy systems. While optimizing the energy 
+                  consumption and task scheduling within data centers located in different time zones and connected at 
+                  national and international level, it is possible to balance the local power grids, to allow a better 
+                  penetration of intermittent renewable energy sources, and a more economical way to address peak demand 
+                  by avoiding or postponing costly investments in network expansion. Challenges and opportunities that 
+                  lie behind the exploitation of data centers flexibility within sustainable electrical energy systems 
+                  will be discussed. An interdisciplinary approach to tackle these kind of problems will be proposed, 
+                  and visions for a novel framework called VEDA (moVE DAta to balance the grid) will be outlined.</p>
             </div>
     
             <div class="pub-item">
@@ -739,14 +942,14 @@
                 <span><i class="far fa-calendar-alt"></i> June 2021 | <a href="https://doi.org/10.1109/ISGTAsia49270.2021.9715647" target="_blank">https://doi.org/10.1109/ISGTAsia49270.2021.9715647</a></span>
                 </div>
                 <p class="pub-desc">Data centers are considered the information backbone of the modern digital society. 
-                    Everyday life is now intertwined with digital tools and platforms such as mobile (smart) phones, 
-                    high-powered personal computers, cyber-physical gadgets, etc. These tools rely on data centers. 
-                    In the modern digital society, the concept of sustainable development includes energy-efficient, 
-                    energy waste recovery, and climate aware process of digitization. Modern and digital power system 
-                    operations would rely more on the data centers. This is a conceptual paper that discusses 
-                    socio-techno-economic aspects to better utilize the data centers in a sustainable way. Broad 
-                    guidelines are provided on the key features to be considered to build novel decision-support 
-                    system tools for the optimal integration of data centers within power systems.</p>
+                  Everyday life is now intertwined with digital tools and platforms such as mobile (smart) phones, 
+                  high-powered personal computers, cyber-physical gadgets, etc. These tools rely on data centers. 
+                  In the modern digital society, the concept of sustainable development includes energy-efficient, 
+                  energy waste recovery, and climate aware process of digitization. Modern and digital power system 
+                  operations would rely more on the data centers. This is a conceptual paper that discusses 
+                  socio-techno-economic aspects to better utilize the data centers in a sustainable way. Broad 
+                  guidelines are provided on the key features to be considered to build novel decision-support 
+                  system tools for the optimal integration of data centers within power systems.</p>
             </div>
     
             <div class="pub-item">
@@ -756,37 +959,32 @@
                 <span><i class="far fa-calendar-alt"></i> 2016 | <a href="http://dx.doi.org/10.14569/IJACSA.2016.070957" target="_blank">http://dx.doi.org/10.14569/IJACSA.2016.070957</a></span>
                 </div>
                 <p class="pub-desc">As a new branch of Mobile ad hoc networks, Vehicular ad hoc networks (VANETs) 
-                    have significant attention in academic and industry researches. Because of high dynamic nature 
-                    of VANET, the topology will be changed frequently and quickly, and this condition is causing 
-                    some difficulties in maintaining topology of these kinds of networks. Clustering is one of the 
-                    controlling mechanism that able to grouping vehicles in same categories based upon some predefined 
-                    metrics such as density, geographical locations, direction and velocity of vehicles. Using of 
-                    clustering can make network’s global topology less dynamic and improve the scalability of it. 
-                    Many of the VANET clustering algorithms are taken from MANET that has been shown that these 
-                    algorithms are not suitable for VANET. Hence, in this paper we proposed a new clustering scheme 
-                    that use Gauss Markov mobility (GMM) model for mobility predication that make vehicle able to 
-                    prognosticate its mobility relative to its neighbors. The proposed clustering scheme’s goal is 
-                    forming stable clusters by increasing the cluster head lifetime and less cluster head changes number. 
-                    Simulation results show that the proposed scheme has better performance than existing clustering 
-                    approach, in terms of cluster head duration, cluster member duration, cluster head changes rate 
-                    and control overhead.</p>
+                  have significant attention in academic and industry researches. Because of high dynamic nature 
+                  of VANET, the topology will be changed frequently and quickly, and this condition is causing 
+                  some difficulties in maintaining topology of these kinds of networks. Clustering is one of the 
+                  controlling mechanism that able to grouping vehicles in same categories based upon some predefined 
+                  metrics such as density, geographical locations, direction and velocity of vehicles. Using of 
+                  clustering can make network’s global topology less dynamic and improve the scalability of it. 
+                  Many of the VANET clustering algorithms are taken from MANET that has been shown that these 
+                  algorithms are not suitable for VANET. Hence, in this paper we proposed a new clustering scheme 
+                  that use Gauss Markov mobility (GMM) model for mobility predication that make vehicle able to 
+                  prognosticate its mobility relative to its neighbors. The proposed clustering scheme’s goal is 
+                  forming stable clusters by increasing the cluster head lifetime and less cluster head changes number. 
+                  Simulation results show that the proposed scheme has better performance than existing clustering 
+                  approach, in terms of cluster head duration, cluster member duration, cluster head changes rate 
+                  and control overhead.</p>
             </div>
-
-            </section>
+        </section>
 
         <!-- Open Source & Certifications -->
         <section style="margin-top: 2.5rem;" id="certifications">
           <div class="section-title"><i class="fas fa-trophy"></i><span>Credentials</span></div>
-          <div style="display: flex; flex-wrap: wrap; gap: 2rem;">
-            <div style="flex:2;">
-              <div class="cert-grid">
-                <div class="cert-card-mini"><i class="fab fa-microsoft"></i> <strong>AZ-900</strong><br><small>Azure Fundamentals</small></div>
-                <div class="cert-card-mini"><i class="fab fa-microsoft"></i> <strong>AZ-104</strong><br><small>Administrator</small></div>
-                <div class="cert-card-mini"><i class="fab fa-microsoft"></i> <strong>AZ-204</strong><br><small>Developer</small></div>
-              </div>
-            </div>
+          <div class="cert-grid">
+            <div class="cert-card-mini"><i class="fab fa-microsoft"></i> <strong>AZ-900</strong><br><small>Azure Fundamentals</small></div>
+            <div class="cert-card-mini"><i class="fab fa-microsoft"></i> <strong>AZ-104</strong><br><small>Administrator</small></div>
+            <div class="cert-card-mini"><i class="fab fa-microsoft"></i> <strong>AZ-204</strong><br><small>Developer</small></div>
           </div>
-          <div style="margin-top: 1.5rem;">
+          <div style="margin-top: 1.8rem;">
             <span class="architect-badge"><i class="fas fa-arrow-trend-up"></i> Evolving into Software Architect</span>
           </div>
         </section>
