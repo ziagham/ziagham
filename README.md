@@ -35,13 +35,11 @@ These certifications validate my expertise in:
 * DevOps & Deployment Strategies
 * Secure & Scalable System Design
 
-## 🌱 Open Source: FlowSynx
+## 🌱 Open Source Projects
 
-**[FlowSynx](https://github.com/flowsynx/flowsynx)** is my open-source initiative focused on:
+**[Vectra](https://github.com/cortexiumlabs/vectra)**: Intent-Aware Governance Gateway for Autonomous AI Agents.
 
-> **Workflow Automation**
-
-It merges optimization theory, adaptive systems, and modern engineering practices to explore next-generation workflow orchestration.
+**[FlowSynx](https://github.com/flowsynx/flowsynx)**: A deterministic orchestrator for composable micro-workflows with reusable modules.
 
 ## 💡 Engineering Philosophy
 
