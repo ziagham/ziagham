@@ -37,9 +37,7 @@ These certifications validate my expertise in:
 
 ## 🌱 Open Source Projects
 
-**[Vectra](https://github.com/cortexiumlabs/vectra)**: Intent-Aware Governance Gateway for Autonomous AI Agents.
-
-**[FlowSynx](https://github.com/flowsynx/flowsynx)**: A deterministic orchestrator for composable micro-workflows with reusable modules.
+**[Synentra](https://github.com/synentra/synentra)**: Intent-Aware Governance Gateway for Autonomous AI Agents.
 
 ## 💡 Engineering Philosophy
 
