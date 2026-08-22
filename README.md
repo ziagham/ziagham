@@ -1,10 +1,12 @@
 # 👋 Welcome
 
-I’m **Amin Ziagham** — a **Software Engineer** with over **15 years of professional experience** designing and building software systems.
+I’m **Amin Ziagham**, a **Software Engineer** with more than **15 years of experience** designing and building reliable, scalable software systems.
 
-- 🚀 I started programming at **17**, and since then, engineering has been more than a career — it’s been a lifelong passion.
-- 🎯 I’m a member of the **.NET Foundation**, actively supporting and contributing to the open-source ecosystem.
-- 🤖 Currently, I’m expanding my expertise into **AI Engineering**, focusing on AI, machine learning, and intelligent system design.
+My journey in software development began at the age of 17, evolving from an early passion for programming into a lifelong commitment to engineering and continuous learning.
+
+As a member of the **.NET Foundation**, I actively support open-source software and contribute to the broader developer community.
+
+Today, I’m expanding my work into **AI engineering**, focusing on machine learning, intelligent systems, and the practical application of AI to real-world challenges.
 
 ## 🧠 What I Do Best
 
