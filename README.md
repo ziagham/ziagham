@@ -41,6 +41,13 @@ These certifications validate my expertise in:
 
 **[Synentra](https://github.com/synentra/synentra)**: Intent-Aware Runtime Governance for AI Agents.
 
+  <p>
+  Synentra™ sits between autonomous AI agents and the APIs and tools they interact with, providing runtime governance and enforcement for every request. It evaluates request context, classifies likely intent, applies policy and risk controls, and allows, denies, or pauses high-risk actions for human approval.
+  </p>
+
+ **[Website](https://synentra.io)** ·
+ **[Documentation](https://synentra.io/docs)**
+
 ## 💡 Engineering Philosophy
 
 I believe in:
