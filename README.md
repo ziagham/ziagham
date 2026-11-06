@@ -39,7 +39,7 @@ These certifications validate my expertise in:
 
 ## 🌱 Open Source Projects
 
-**[Synentra](https://github.com/synentra/synentra)**: Intent-Aware Governance Gateway for Autonomous AI Agents.
+**[Synentra](https://github.com/synentra/synentra)**: Intent-Aware Runtime Governance for AI Agents.
 
 ## 💡 Engineering Philosophy
 
